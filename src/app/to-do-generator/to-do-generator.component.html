@@ -1,0 +1,22 @@
+<input  type="text" [(ngModel)]="newTodo.title" placeholder="What needs to be done?"  />
+<input   type="date" [(ngModel)]="newTodo.date" placeholder="When needs to be done?"   />
+<input type="button" value="Add" (click)=addTodo()/>
+
+
+<ul>
+    <li *ngFor="let todo of todos">{{todo.title}}   {{todo.date}}
+      <input type="button" value="Delete" (click)=deleteToDo() /></li>
+</ul>
+
+<button (click)=deleteAll()>DeleteAll</button>
+<p><input  #SearchToDo placeholder="323"/><button (click)=searchToDo()>Search</button></p>
+<ul>
+  <li *ngFor="let todo_1 of todos_1">
+    <p>{{todo_1.title}}</p> <p>{{todo_1.date}}</p>
+</ul>
+
+<p><label>Please update your ToDos here</label>
+<input  #updatedTodo placeholder="abc" /><button (click)=updateToDo()>Update</button>
+  
+
+
